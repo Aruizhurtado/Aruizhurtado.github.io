@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/**********************************************pagina de inicio****************************************************
+********************************************************************************************************************
+*******************************************************************************************************************/
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1{
+    margin-top: 60px;
+    opacity: 0;
+    font-size: 3rem;
+    transform: translateY(-100px);
+    animation: caer 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+    z-index: 2;
+} 
+
+h2{
+    padding: 3rem 2rem;
+    font-size: 3rem;
+    font-weight: lighter;
+    line-height: 1.4;
+    text-align: center;
+    color: rgb(53, 51, 51);
+}
+
+h3{
+    font-size: 1.2rem;
+    padding: 0 2rem 0;
+    margin-bottom: 20px;
+    color: rgb(53, 51, 51);
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.228);
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    z-index: 3;
+    background-color: white
+
+}
+
+.logotipo{
+    width: 150px;
+    height: 150px;
+}
+
+.nab-bar a{
+    text-decoration: none;
+    padding: 20px;
+    color: rgb(53, 51, 51);
+}
+
+.nab-bar a:hover{
+    color: #D63484;
+}
+
+.nab-bar a.active{
+    color: #D63484;
+}
+/*******portada******/
+
+.portada{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/portada.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.portada::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+}
+
+@keyframes caer {
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.presentacion{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background-color: white;
+}
+
+.presentacion img{
+    width: 70%;
+    height: 70%;
+    padding: 4rem;
+}
+
+.presentacion p{
+    font-size: 1rem;
+    padding: 0 2rem 0;
+    line-height: 1.7;
+    color: rgb(53, 51, 51);;
+}
+
+
+/*******servicios******/
+
+.contenido{
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    
+}
+
+.m-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.5s linear;
+
+}
+
+.m-img:hover{
+    transform: scale(1.02);
+}
+
+.texto{
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.fondo-color{
+    background-color: #D63484;
+    color: white; 
+}
+
+/*******galeria y formulario******/
+
+.galeria p, .formulario p{
+    font-size: 1rem;
+    padding: 0 2rem 0;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    color: rgb(53, 51, 51);;
+}
+
+.img-galeri img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.5s linear;
+}
+
+.img-galeri img:hover{
+    transform: scale(1.03);
+}
+
+.img-galeri{
+
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    justify-items: center;
+
+}
+
+.formulario{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.formulario form input:not([type="checkbox"]), 
+.formulario form textarea {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.formulario form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    max-height: 150px;
+    min-height: 140px;
+}
+
+.btn-enviar{
+    background-color: #D63484;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.btn-enviar:hover{
+    background-color: white;
+    color: #D63484;
+    border-color: #D63484;
+}
+
+.info-form{
+    text-align: center;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.228);
+}
+
+.checkbox-form{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="checkbox"]{
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.fuscia{
+    color: #D63484;
+}
+
+/*******footer******/
+
+.contenedor{
+    margin-top: 50px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.228);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 15px;
+    padding: 70px;
+    text-align: center;
+    align-items: center;
+}
+
+.contenedor h3{
+    color: rgb(53, 51, 51);
+    font-size: 1rem;
+}
+
+.iconos img{
+    width: 30px;
+    height: 30px;
+}
+
+.iconos img:hover{
+    transform: scale(1.1);
+}
+
+.direccion p{
+    font-size: 0.8rem;
+}
+
+.avisoLegal a{
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    background-color: #D63484;
+}
+
+/**********************************************otros estilos****************************************************
+********************************************************************************************************************
+*******************************************************************************************************************/
+
+/*******pagina de portafolio******/
+
+.portafolio h2{
+    padding-top: 200px;
+}
+
+/*******pagina de presupuesto******/
+
+.presupuesto{
+    padding-top: 200px;
+}
+
+/*******pagina de contacto******/
+
+.tex-contact{
+    padding-top: 150px;
+}
+
+.contacto{
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.datos{
+    line-height: 1.5rem;
+}
+
+.datos img{
+    width: 60px;
+    height: 60px;
+}
